@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/home"
+        android:enabled="true"
+        android:icon="@drawable/home"
+        android:title="">
+
+    </item>
+    <item
+        android:id="@+id/map"
+        android:enabled="true"
+        android:icon="@drawable/map"
+        android:title=""
+        >
+
+    </item>
+    <item
+        android:id="@+id/my_property"
+        android:enabled="true"
+        android:icon="@drawable/my_property"
+        android:title="">
+
+    </item>
+    <item
+        android:id="@+id/notificaiton"
+        android:enabled="true"
+        android:icon="@drawable/notification"
+        android:title="">
+
+    </item>
+</menu>

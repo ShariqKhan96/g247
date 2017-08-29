@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:id="@+id/use_for_color"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:id="@+id/amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/profile_image"
+        android:layout_alignRight="@+id/profile_image"
+        android:layout_alignTop="@+id/rating"
+        android:text="2000000"
+        android:textSize="20sp" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profile_image"
+        android:layout_width="80dp"
+        android:layout_height="96dp"
+        android:layout_below="@+id/amount"
+        android:layout_marginLeft="14dp"
+        android:layout_marginTop="15dp"
+        android:src="@drawable/circularimage" />
+
+    <TextView
+        android:id="@+id/area"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/profile_image"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="11dp"
+        android:text="Area :area name" />
+
+    <TextView
+        android:id="@+id/scheme"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/area"
+        android:layout_alignStart="@+id/area"
+        android:layout_below="@+id/area"
+        android:layout_marginTop="5dp"
+        android:text="Area :area name" />
+
+    <TextView
+        android:id="@+id/size"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/scheme"
+        android:layout_alignStart="@+id/scheme"
+        android:layout_below="@+id/scheme"
+        android:layout_marginTop="5dp"
+        android:text="Area :area name" />
+
+    <TextView
+
+        android:id="@+id/subscheme"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/size"
+        android:layout_alignStart="@+id/size"
+        android:layout_below="@+id/size"
+        android:layout_marginTop="5dp"
+        android:text="Area :area name" />
+
+    <TextView
+
+        android:id="@+id/phase"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/subscheme"
+        android:layout_alignStart="@+id/subscheme"
+        android:layout_below="@+id/profile_image"
+        android:layout_marginTop="2dp"
+        android:text="Area :area name" />
+
+    <RatingBar
+        android:id="@+id/rating"
+        style="?android:attr/ratingBarStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="17dp"
+        android:progressTint="@color/darkgreen"
+        android:layout_marginRight="17dp"
+        android:layout_marginTop="13dp"
+        android:isIndicator="true"
+        android:numStars="5" />
+
+    <Button
+        android:id="@+id/sendenquiry"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="120dp"
+        android:layout_height="34dp"
+        android:layout_below="@+id/profile_image"
+        android:layout_marginLeft="10dp"
+        android:background="@layout/round_for_send_enquiry"
+        android:gravity="center_horizontal|center_vertical"
+        android:padding="4dp"
+        android:text="Send Enquiry"
+        android:textAllCaps="false"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="#FFFFFF"
+
+        />
+
+    <Button
+        android:id="@+id/add_to_cart"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="120dp"
+        android:layout_height="34dp"
+
+        android:layout_alignLeft="@+id/sendenquiry"
+        android:layout_alignStart="@+id/sendenquiry"
+        android:layout_below="@+id/sendenquiry"
+        android:layout_marginTop="10dp"
+        android:background="@layout/round_for_add_to_cart"
+        android:gravity="center_horizontal|center_vertical"
+        android:padding="4dp"
+
+        android:text="Add to favourite"
+        android:textAllCaps="false"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="#025236" />
+</RelativeLayout>

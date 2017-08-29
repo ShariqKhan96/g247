@@ -16,6 +16,17 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".Main2Activity" />
+        <activity
+            android:name=".GridActivity"
+            android:parentActivityName=".PropertyActivity" />
+        <activity android:name=".MapActivity" />
+        <activity android:name=".PropertyActivity" />
+        <activity android:name=".NotificationActivity" />
+        <activity
+            android:name=".SubSchemeActivity"
+            android:parentActivityName=".GridActivity" />
+        <activity android:name=".FormActivity"></activity>
     </application>
 
 </manifest>

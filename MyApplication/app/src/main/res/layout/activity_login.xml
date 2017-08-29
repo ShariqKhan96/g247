@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_login"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="48dp"
+    android:paddingRight="48dp"
+    android:paddingTop="48dp"
+   >
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    android:orientation="vertical"
+    android:layout_centerInParent="true"
+    android:id="@+id/upperlayout"
+    android:gravity="center"
+    >
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Username"
+        android:textSize="12sp"
+        android:paddingLeft="2dp"
+        android:textColor="#A4B0C6"
+        android:paddingTop="2dp"
+        android:maxLength="30"
+        android:paddingRight="2dp"
+        android:background="@layout/round"
+        android:paddingBottom="2dp"
+        android:layout_marginBottom="14dp"   />
+//android:drawableLeft="@drawable/phone"
+
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Password"
+        android:maxLength="30"
+        android:textSize="12sp"
+        android:paddingLeft="2dp"
+        android:textColor="#A4B0C6"
+        android:paddingTop="2dp"
+        android:background="@layout/round"
+        android:paddingRight="2dp"
+        android:paddingBottom="2dp"
+        android:inputType="textPassword"
+        android:layout_marginBottom="14dp" />
+android:drawableLeft="@drawable/password"
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/Signin"
+        android:background="@layout/round_signin_button"
+        android:textColor="#FFFFFF"
+        android:textAllCaps="false"
+        android:layout_marginBottom="28dp"
+        android:text="SignIn"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/forget"
+        android:textColor="#A4B0C6"
+        android:text="Forget Password?"
+        android:textAllCaps="false"
+        style="?android:attr/borderlessButtonStyle"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:gravity="bottom"
+        android:layout_alignParentBottom="true"
+        android:layout_height="wrap_content"
+        >
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/createaccount"
+            android:textColor="#A4B0C6"
+            android:textAllCaps="false"
+            android:text="Create Account"
+            style="?android:attr/borderlessButtonStyle"
+            />
+    </LinearLayout>
+    </RelativeLayout>

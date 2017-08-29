@@ -1,11 +1,55 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimary">#025236</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
+    <style name="NavigationDrawerStyle" parent="@style/Widget.AppCompat.Toolbar">
+
+        <item name="android:textColor">#FFFFFF</item>
+
+
+    </style>
+    <style name="AppTabLayout" parent="Widget.Design.TabLayout">
+
+        <item name="tabIndicatorColor">@color/white</item>
+        <item name="tabIndicatorHeight">4dp</item>
+
+        <item name="tabPaddingEnd">6dp</item>
+        <item name="tabBackground">@color/darkgreen</item>
+
+        <item name="tabSelectedTextColor">@color/white</item>
+    </style>
+
+
+
+
+    <style name="ToolbarColoredBackArrow" parent="AppTheme">
+        <item name="android:textColorSecondary">#fff</item>
+    </style>
+    <style name="RatingBar" parent="Theme.AppCompat">
+
+        <item name="colorControlActivated">#FF025236</item>
+    </style>
+
+
+
+    <style name="Base_ToolbarTheme">
+        <!-- Color used for the title of the Toolbar - as long as not overridden -->
+        <item name="android:textColorPrimary">@color/background</item>
+        <!-- Used to color back button and three dots -->
+        <item name="android:textColorSecondary">@color/background</item>
+    </style>
 
 </resources>
+
+
+
+
+
+
+
+
