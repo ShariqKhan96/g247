@@ -1,42 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:card_view="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/card_view"
+<FrameLayout
+    android:layout_height="wrap_content"
+    android:layout_width="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+<ImageView android:id="@+id/book_name"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    card_view:cardBackgroundColor="@color/colorPrimaryDark"
-card_view:cardCornerRadius="-2dp"
-    >
+    android:alpha="0.8"
+    android:gravity="center"
+    android:padding="10dp"
+    android:scaleType="fitXY"
+    android:src="@drawable/circularimage"
+    xmlns:android="http://schemas.android.com/apk/res/android" />
 
-    <FrameLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
 
         <ImageView
-            android:id="@+id/book_name"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:scaleType="fitXY"
-            android:gravity="center"
-            android:alpha="0.8"
-            android:src="@drawable/circularimage"
-            android:padding="10dp" />
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:alpha="0.6"
+            android:id="@+id/imm"
+            android:background="#000" />
+
 
         <TextView
-            android:layout_gravity="center"
             android:id="@+id/author"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_below="@+id/book_name"
+            android:layout_gravity="center"
             android:gravity="center_horizontal"
             android:paddingBottom="8dp"
             android:paddingTop="8dp"
-            android:textStyle="bold"
             android:text="@string/app_name"
             android:textColor="#ffffff"
-            android:textSize="25sp" />
+            android:textSize="19sp"
+            android:textStyle="bold" />
 
-    </FrameLayout>
 
-</android.support.v7.widget.CardView>
+
+</FrameLayout>

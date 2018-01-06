@@ -1,86 +1,108 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:wheel="http://schemas.android.com/apk/res-auto"
     android:id="@+id/activity_login"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#fff"
     android:paddingLeft="48dp"
-    android:paddingRight="48dp"
-    android:paddingTop="48dp"
-   >
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:paddingRight="48dp">
 
-    android:orientation="vertical"
-    android:layout_centerInParent="true"
-    android:id="@+id/upperlayout"
-    android:gravity="center"
-    >
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Username"
-        android:textSize="12sp"
-        android:paddingLeft="2dp"
-        android:textColor="#A4B0C6"
-        android:paddingTop="2dp"
-        android:maxLength="30"
-        android:paddingRight="2dp"
-        android:background="@layout/round"
-        android:paddingBottom="2dp"
-        android:layout_marginBottom="14dp"   />
-//android:drawableLeft="@drawable/phone"
-
-
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Password"
-        android:maxLength="30"
-        android:textSize="12sp"
-        android:paddingLeft="2dp"
-        android:textColor="#A4B0C6"
-        android:paddingTop="2dp"
-        android:background="@layout/round"
-        android:paddingRight="2dp"
-        android:paddingBottom="2dp"
-        android:inputType="textPassword"
-        android:layout_marginBottom="14dp" />
-android:drawableLeft="@drawable/password"
-
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/Signin"
-        android:background="@layout/round_signin_button"
-        android:textColor="#FFFFFF"
-        android:textAllCaps="false"
-        android:layout_marginBottom="28dp"
-        android:text="SignIn"/>
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/forget"
-        android:textColor="#A4B0C6"
-        android:text="Forget Password?"
-        android:textAllCaps="false"
-        style="?android:attr/borderlessButtonStyle"/>
-    </LinearLayout>
     <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="match_parent"
-        android:gravity="bottom"
-        android:layout_alignParentBottom="true"
+        android:layout_height="200dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/adalogoewrans" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/upperlayout"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        >
-        <Button
+        android:layout_marginTop="28dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_below="@+id/linearLayout"
+        android:layout_alignParentStart="true">
+
+        <EditText
+            android:id="@+id/user_name_signup"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/createaccount"
-            android:textColor="#A4B0C6"
+            android:layout_marginBottom="14dp"
+            android:background="@layout/round"
+            android:drawableLeft="@drawable/person"
+            android:hint="Username"
+            android:maxLength="30"
+            android:padding="8dp"
+            android:textColor="#025236"
+            android:textColorHint="@color/colorPrimaryDark"
+            android:textSize="12sp" />
+
+
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="14dp"
+            android:background="@layout/round"
+            android:drawableLeft="@drawable/password"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:maxLength="30"
+            android:padding="8dp"
+            android:textColor="#025236"
+            android:textColorHint="@color/colorPrimaryDark"
+
+            android:textSize="12sp" />
+
+
+        <Button
+
+            android:id="@+id/Signin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="28dp"
+            android:background="@layout/round_signin_button"
+            android:text="Sign In"
+            android:textStyle="bold"
             android:textAllCaps="false"
-            android:text="Create Account"
+            android:textColor="#FFFFFF" />
+
+        <Button
+            android:id="@+id/forget"
             style="?android:attr/borderlessButtonStyle"
-            />
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Forget Password?"
+            android:textStyle="bold"
+            android:textAllCaps="false"
+            android:textAppearance="?android:attr/textAppearanceListItemSmall"
+            android:textColor="@color/colorPrimaryDark" />
     </LinearLayout>
-    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="bottom">
+
+        <Button
+            android:id="@+id/createaccount"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Create Account"
+            android:textAllCaps="false"
+            android:textStyle="bold"
+            android:textAppearance="?android:attr/textAppearanceListItemSmall"
+            android:textColor="@color/colorPrimaryDark" />
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,32 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-android:id="@+id/main_relative_chat_layout"
-    android:background="@color/colorPrimary"
-    android:layout_width="match_parent" android:layout_height="match_parent">
 
-
-
-<ImageView
-    android:layout_width="wrap_content"
+<android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_app_bar"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:id="@+id/ic_navbar"
-    android:src="@drawable/ic_nav"
-    android:layout_marginStart="10dp"
-    android:layout_marginTop="5dp"
-    android:layout_marginLeft="10dp" />
+    android:background="@color/colorPrimary"
+    android:orientation="vertical"
+    app:theme="@style/ToolbarColoredBackArrow"
+    app:titleTextColor="#fff">
+
+    <ImageView
+        android:id="@+id/drawerimage"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_gravity="left"
+        android:src="@drawable/ic_nav" />
 
     <TextView
-
-android:layout_marginLeft="150dp"
-        android:id="@+id/chat_person_name"
+        android:id="@+id/toolbarText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:textStyle="bold"
-        android:text="News Feed"
-        android:textAllCaps="false"
+        android:layout_gravity="center"
+        android:text="Sub Schemes"
         android:textColor="#fff"
-        android:textSize="20sp" />
+        android:textSize="23sp"
+        android:textStyle="bold" />
 
+    <ImageView
+        android:id="@+id/searchimage"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_gravity="right"
+        android:layout_marginRight="10dp"
+        android:src="@drawable/ic_search"
 
-</RelativeLayout>
+        />
+
+</android.support.v7.widget.Toolbar>

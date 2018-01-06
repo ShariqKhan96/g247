@@ -21,10 +21,10 @@ public class SectionPagerAdapter extends FragmentPagerAdapter {
 
         switch (position) {
             case 0:
-                Wanted wanted = new Wanted();
+                Sales wanted = new Sales();
                 return wanted;
             case 1:
-                Sales sales = new Sales();
+                Wanted sales = new Wanted();
                 return sales;
         }
         return null;
@@ -39,9 +39,9 @@ public class SectionPagerAdapter extends FragmentPagerAdapter {
     public CharSequence getPageTitle(int position) {
         switch (position) {
             case 0:
-                return "Wanted";
-            case 1:
                 return "Sales";
+            case 1:
+                return "Wanted";
             default:
                 return null;
         }

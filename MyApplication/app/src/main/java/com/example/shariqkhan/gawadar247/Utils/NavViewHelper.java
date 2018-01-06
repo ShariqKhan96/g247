@@ -6,8 +6,11 @@ import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.view.MenuItem;
 
+import com.example.shariqkhan.gawadar247.DistrictMap;
+import com.example.shariqkhan.gawadar247.Favourite;
 import com.example.shariqkhan.gawadar247.MainActivity;
-import com.example.shariqkhan.gawadar247.MapActivity;
+import com.example.shariqkhan.gawadar247.NewsFeedActivity;
+import com.example.shariqkhan.gawadar247.MapsActivity;
 import com.example.shariqkhan.gawadar247.NotificationActivity;
 import com.example.shariqkhan.gawadar247.PropertyActivity;
 import com.example.shariqkhan.gawadar247.R;
@@ -26,6 +29,7 @@ public class NavViewHelper {
         bottomNavigationViewEx.setTextVisibility(false);
 
     }
+
 public static void enableNavigation(final Context context, BottomNavigationViewEx bottomNavigationViewEx)
 {
     bottomNavigationViewEx.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -39,11 +43,18 @@ public static void enableNavigation(final Context context, BottomNavigationViewE
                     context.startActivity(intent1);
                     break;
 
-                case R.id.map:
-                    Intent intent2 = new Intent(context, MapActivity.class);
+                case R.id.newsfeed:
+                    Intent intent2 = new Intent(context, Favourite.class);
                     context.startActivity(intent2);
 
                     break;
+
+                case R.id.map2:
+                    Intent intent3 = new Intent(context, DistrictMap.class);
+                    context.startActivity(intent3);
+
+                    break;
+
 
                 case R.id.my_property:
                     Intent intent5 = new Intent(context, PropertyActivity.class);

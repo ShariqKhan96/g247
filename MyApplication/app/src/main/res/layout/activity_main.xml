@@ -1,48 +1,128 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.shariqkhan.gawadar247.MainActivity">
+    tools:openDrawer="right">
 
-    <android.support.design.widget.AppBarLayout
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-
-        android:layout_height="wrap_content">
-
-        <include
-            android:id="@+id/main_page_toolbar"
-            layout="@layout/app_bar_layout" />
-
-        <android.support.design.widget.TabLayout
-            android:id="@+id/main_tab"
-            style="@style/AppTabLayout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:tabBackground="@drawable/tababckground"
-           >
-
-        </android.support.design.widget.TabLayout>
-    </android.support.design.widget.AppBarLayout>
-
-    <android.support.v4.view.ViewPager
-        android:id="@+id/main_view_pager"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
+        tools:context="com.example.shariqkhan.gawadar247.MainActivity"
 
         >
 
-    </android.support.v4.view.ViewPager>
 
-    <com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx
-        android:id="@+id/bottom_nav_bar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:background="#d6d6d6"
-        app:menu="@menu/menu">
+        <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/frameLayout"
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:background="@color/colorPrimary">
 
-    </com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx>
+            <ImageView
+                android:id="@+id/drawerimage"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_gravity="start|center"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/ic_nav" />
 
-</RelativeLayout>
+            <TextView
+                android:id="@+id/toolbarText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="News Feed"
+                android:textColor="#fff"
+                android:textSize="21sp" />
+
+            <ImageView
+                android:id="@+id/searchimage"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_gravity="end|center"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/ic_search"
+
+                />
+
+        </FrameLayout>
+
+
+        <android.support.design.widget.AppBarLayout
+            android:layout_marginTop="3dp"
+            android:id="@+id/appBarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="51dp"
+            android:layout_below="@+id/frameLayout">
+
+            <android.support.design.widget.TabLayout
+                android:id="@+id/main_tab"
+                style="@style/AppTabLayout"
+                app:tabTextAppearance="?android:attr/textAppearanceSmall"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                app:tabBackground="@drawable/tababckground">
+
+            </android.support.design.widget.TabLayout>
+        </android.support.design.widget.AppBarLayout>
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/main_viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/appBarLayout">
+
+        </android.support.v4.view.ViewPager>
+
+
+        <com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx
+
+            android:id="@+id/bottom_nav_bar"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+
+            android:layout_alignParentBottom="true"
+            android:background="@color/white"
+            app:menu="@menu/menu">
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/darkgreen" />
+
+
+        </com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx>
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/bottom_nav_bar"
+            android:layout_alignEnd="@+id/bottom_nav_bar"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="20dp"
+            android:layout_marginEnd="20dp"
+            app:backgroundTint="@color/colorPrimaryDark"
+            app:fabSize="normal"
+            app:srcCompat="@drawable/add_3x" />
+
+    </RelativeLayout>
+
+
+    <android.support.design.widget.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:headerLayout="@layout/nav_header_navigation"
+        app:menu="@menu/activity_navigation_drawer" />
+
+
+</android.support.v4.widget.DrawerLayout>

@@ -4,60 +4,87 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.shariqkhan.gawadar247.MapActivity">
+    tools:context="com.example.shariqkhan.gawadar247.Favourite">
+
+
     <android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:id="@+id/main_app_bar"
-        app:theme="@style/ToolbarColoredBackArrow"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/colorPrimary"
         android:orientation="vertical"
+        app:navigationIcon="@drawable/ic_keyboard_arrow_left_black_24dp"
+        app:theme="@style/ToolbarColoredBackArrow"
         app:titleTextColor="#fff">
 
         <TextView
+            android:id="@+id/tollbarText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/toolbarText"
-            android:textStyle="bold"
-            android:layout_gravity="center"
-            android:textSize="23sp"
+            android:layout_gravity="center|top"
+            android:text="My Properties"
+            android:textAllCaps="false"
             android:textColor="#fff"
-            android:text="My Property"
-            />
+            android:textSize="21sp" />
+
 
     </android.support.v7.widget.Toolbar>
 
-    <android.support.v7.widget.RecyclerView
-        android:layout_below="@+id/main_app_bar"
-        android:id="@+id/property_recycler"
+    <android.support.design.widget.AppBarLayout
+        android:layout_marginTop="3dp"
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_below="@+id/main_app_bar">
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/main_tab"
+            style="@style/AppTabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            app:tabBackground="@drawable/tababckground"
+
+            app:tabTextAppearance="?android:attr/textAppearanceSmall">
+
+        </android.support.design.widget.TabLayout>
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/main_viewpager"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        >
+        android:layout_below="@+id/appBarLayout">
 
-    </android.support.v7.widget.RecyclerView>
+    </android.support.v4.view.ViewPager>
+
 
     <com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx
         android:id="@+id/bottom_nav_bar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="52dp"
         android:layout_alignParentBottom="true"
-        android:background="#d6d6d6"
-        app:menu="@menu/menu" />
+        android:background="@color/customBackground"
+        app:menu="@menu/menu">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorPrimaryDark" />
+    </com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx>
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/floatingActionButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="30dp"
-        android:clickable="true"
-        app:fabSize="mini"
-        app:backgroundTint="@color/colorPrimaryDark"
-        app:srcCompat="@drawable/add"
         android:layout_above="@+id/bottom_nav_bar"
-        android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginRight="18dp"
-        android:layout_marginEnd="18dp" />
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginEnd="20dp"
+        android:clickable="true"
+        app:backgroundTint="@color/colorPrimaryDark"
+        app:fabSize="normal"
+        app:srcCompat="@drawable/add_3x" />
 
 </RelativeLayout>

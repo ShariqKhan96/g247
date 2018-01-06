@@ -18,14 +18,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/toolbarText"
-            android:textStyle="bold"
             android:layout_gravity="center"
-            android:textSize="23sp"
+            android:textSize="21sp"
             android:textColor="#fff"
-            android:text="Schemes"
+            android:text="Select Scheme"
             />
 
-    </android.support.v7.widget.Toolbar>>
+
+    </android.support.v7.widget.Toolbar>
 
 
     <android.support.v7.widget.RecyclerView

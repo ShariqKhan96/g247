@@ -21,16 +21,18 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="Sub Schemes"
+            android:text="Select Subscheme"
             android:textColor="#fff"
-            android:textSize="23sp"
-            android:textStyle="bold" />
+            android:textSize="21sp" />
+
 
     </android.support.v7.widget.Toolbar>
 
     <android.support.v7.widget.RecyclerView
-        android:layout_width="match_parent"
         android:id="@+id/recycler_view2"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/main_app_bar"></android.support.v7.widget.RecyclerView>
+        android:layout_below="@+id/main_app_bar">
+
+    </android.support.v7.widget.RecyclerView>
 </RelativeLayout>

@@ -4,29 +4,39 @@
     <item
         android:id="@+id/home"
         android:enabled="true"
-        android:icon="@drawable/home"
+
+        android:icon="@drawable/home_3x"
         android:title="">
 
     </item>
     <item
-        android:id="@+id/map"
+        android:id="@+id/newsfeed"
         android:enabled="true"
-        android:icon="@drawable/map"
+        android:icon="@drawable/heart"
         android:title=""
         >
 
     </item>
     <item
+        android:id="@+id/map2"
+        android:enabled="true"
+        android:icon="@drawable/ic_circle"
+        android:title=""
+        >
+
+    </item>
+
+    <item
         android:id="@+id/my_property"
         android:enabled="true"
-        android:icon="@drawable/my_property"
+        android:icon="@drawable/myproperties_3x"
         android:title="">
 
     </item>
     <item
         android:id="@+id/notificaiton"
         android:enabled="true"
-        android:icon="@drawable/notification"
+        android:icon="@drawable/globe_3x"
         android:title="">
 
     </item>

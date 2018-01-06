@@ -6,10 +6,54 @@
     android:layout_height="match_parent"
     tools:context="com.example.shariqkhan.gawadar247.MainActivity">
 
-    <ListView
+    <android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/main_app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:orientation="vertical"
+        app:theme="@style/ToolbarColoredBackArrow"
+        app:titleTextColor="#fff">
+
+        <TextView
+            android:id="@+id/tollbarText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|top"
+            android:text="Notifications"
+            android:textAllCaps="false"
+            android:textColor="#fff"
+            android:textSize="21sp" />
+
+
+    </android.support.v7.widget.Toolbar>
+
+    <android.support.v7.widget.RecyclerView
         android:id="@+id/notify_listview"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:divider="@color/grey"
+        android:dividerHeight="1dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/main_app_bar"/>
 
+
+
+    <com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx
+
+        android:id="@+id/bottom_nav_bar"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        app:menu="@menu/menu">
+
+        <View
+
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/darkgreen" />
+
+    </com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx>
 
 </RelativeLayout>
